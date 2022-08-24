@@ -1,15 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-card-post',
   templateUrl: './card-post.component.html',
-  styleUrls: ['./card-post.component.scss']
+  styleUrls: ['./card-post.component.scss'],
 })
-export class CardPostComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export default class CardPostComponent {}

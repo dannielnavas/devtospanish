@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  production: true,
+  devtoURL: 'https://dev.to/api/',
 };
+
+export default environment;
