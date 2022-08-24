@@ -8,6 +8,12 @@ const routes: Routes = [
       // eslint-disable-next-line implicit-arrow-linebreak
       import('./pages/main/main.module').then((m) => m.default),
   },
+  {
+    path: 'publication',
+    loadChildren: () =>
+      // eslint-disable-next-line implicit-arrow-linebreak
+      import('./pages/article/article.module').then((m) => m.default),
+  },
 ];
 
 @NgModule({
