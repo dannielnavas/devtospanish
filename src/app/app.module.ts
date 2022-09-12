@@ -25,4 +25,4 @@ registerLocaleData(localeEs, 'es');
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export default class AppModule {}

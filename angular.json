@@ -115,6 +115,7 @@
   },
   "cli": {
     "analytics": "1c93fd83-01d8-4f95-9873-50bd339725d5",
+    "packageManager": "yarn",
     "schematicCollections": [
       "@angular-eslint/schematics"
     ]
