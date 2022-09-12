@@ -1,1 +1,6 @@
-<p>card-post works!</p>
+<a class="card" [href]="post.url" target="_blank">
+    <img [src]="post.user.profile_image_90" [alt]="post.user.name" class="card__user" loading="lazy">
+    <img [src]="post.cover_image || post.social_image " [alt]="post.title" class="card__image" loading="lazy">
+    <span class="card__date">{{post.published_at | date:'d MMM y'}}</span>
+    <h2 class="card__title">{{post.title}}</h2>
+</a>

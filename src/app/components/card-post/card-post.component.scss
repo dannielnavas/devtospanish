@@ -1,0 +1,44 @@
+@import "../../utils/scss/vars";
+
+.card {
+    height: 318px;
+    width: 350px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 8px;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 8px;
+    text-decoration: none;
+
+    &__user {
+        border-radius: 9999px;
+        height: 50px;
+    }
+
+    &__image {
+        height: 160px;
+        width: 350px;
+        border-radius: 4px;
+    }
+
+    &__date {
+        color: $text-color-date;
+        font-size: 14px;
+        text-transform: capitalize;
+        font-weight: 300;
+        line-height: 14px;
+        height: 11px;
+    }
+
+    &__title {
+        color: $title-color;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 24px;
+    }
+}

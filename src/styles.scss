@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./app/utils/scss/vars";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    background-color: $main-color;
+    font-family: 'Roboto', sans-serif;
+}

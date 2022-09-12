@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IDevto } from 'src/app/core/models/devto.interface';
 
 @Component({
   selector: 'app-card-post',
   templateUrl: './card-post.component.html',
-  styleUrls: ['./card-post.component.scss']
+  styleUrls: ['./card-post.component.scss'],
 })
 export class CardPostComponent implements OnInit {
+  @Input() post!: IDevto;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
