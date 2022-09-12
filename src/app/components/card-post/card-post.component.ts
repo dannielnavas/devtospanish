@@ -6,7 +6,7 @@ import { IDevto } from 'src/app/core/models/devto.interface';
   templateUrl: './card-post.component.html',
   styleUrls: ['./card-post.component.scss'],
 })
-export class CardPostComponent implements OnInit {
+export default class CardPostComponent implements OnInit {
   @Input() post!: IDevto;
   constructor() {}
 

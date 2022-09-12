@@ -7,7 +7,7 @@ import { IDevto } from '../models/devto.interface';
 @Injectable({
   providedIn: 'root',
 })
-export class DevtoService {
+export default class DevtoService {
   constructor(private http: HttpClient) {}
 
   getPostSpanish(): Observable<IDevto[]> {

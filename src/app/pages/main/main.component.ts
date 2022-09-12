@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { IDevto } from 'src/app/core/models/devto.interface';
-import { DevtoService } from 'src/app/core/services/devto.service';
+import DevtoService from 'src/app/core/services/devto.service';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
 })
-export class MainComponent implements OnInit {
+export default class MainComponent implements OnInit {
   posts!: IDevto[];
   constructor(private devtoService: DevtoService) {}
 
