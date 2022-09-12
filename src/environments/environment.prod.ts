@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  devtoURL: 'https://dev.to/api/',
+  devtoURL: 'https://devtospanishback.vercel.app/',
 };
 
 export default environment;
