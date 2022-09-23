@@ -10,7 +10,9 @@ import { IDevto } from '../models/devto.interface';
 export default class DevtoService {
   constructor(private http: HttpClient) {}
 
-  getPostSpanish(): Observable<IDevto[]> {
-    return this.http.get<IDevto[]>(`${environment.devtoURL}/api/postspanish`);
+  getPostSpanish(page: number): Observable<IDevto[]> {
+    return this.http.get<IDevto[]>(
+      `${environment.devtoURL}/api/postspanish/${page}`
+    );
   }
 }

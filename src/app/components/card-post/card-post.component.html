@@ -1,6 +1,8 @@
-<a class="card" [href]="post.url" target="_blank">
+<div class="card">
     <img [src]="post.user.profile_image_90" [alt]="post.user.name" class="card__user" loading="lazy">
-    <img [src]="post.cover_image || post.social_image " [alt]="post.title" class="card__image" loading="lazy">
-    <span class="card__date">{{post.published_at | date:'d MMM y'}}</span>
-    <h2 class="card__title">{{post.title}}</h2>
-</a>
+    <a class="link-post" [href]="post.url" target="_blank">
+        <img [src]="post.cover_image || post.social_image " [alt]="post.title" class="link-post__image" loading="lazy">
+        <span class="link-post__date">{{post.published_at | date:'d MMM y'}}</span>
+        <h2 class="link-post__title">{{post.title}}</h2>
+    </a>
+</div>

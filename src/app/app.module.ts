@@ -3,11 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
 import { StoreModule } from '@ngrx/store';
+import localeEs from '@angular/common/locales/es';
+import { registerLocaleData } from '@angular/common';
 import AppRoutingModule from './app-routing.module';
 import AppComponent from './app.component';
 
-import localeEs from '@angular/common/locales/es';
-import { registerLocaleData } from '@angular/common';
 registerLocaleData(localeEs, 'es');
 @NgModule({
   declarations: [AppComponent],

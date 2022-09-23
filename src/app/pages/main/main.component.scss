@@ -16,8 +16,6 @@
     flex-flow: row wrap;
     gap: 32px;
     justify-content: space-evenly;
-
-
 }
 
 .main {
@@ -30,5 +28,27 @@
         font-size: 32px;
         font-weight: 700;
         line-height: 25px;
+    }
+}
+
+.load-posts {
+    height: 52px;
+    width: 100%;
+    padding: 0 32px;
+    margin: 0 0 16px 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    &__button {
+        height: 52px;
+        width: 100%;
+        background-color: $title-color;
+        color: $main-color;
+        border-radius: 8px;
+    }
+
+    &__loader {
+        height: 85px;
     }
 }
