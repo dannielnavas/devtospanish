@@ -1,7 +1,7 @@
 @import "../../utils/scss/vars";
 
 .card {
-    height: 318px;
+    min-height: 300px;
     width: 350px;
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -41,6 +41,7 @@
         font-weight: 300;
         line-height: 14px;
         height: 11px;
+        margin-bottom: 8px;
     }
 
     &__title {
@@ -48,5 +49,22 @@
         font-size: 24px;
         font-weight: 700;
         line-height: 24px;
+        margin-bottom: 8px;
+    }
+}
+
+.actions {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    &__image {
+        height: 24px;
     }
 }

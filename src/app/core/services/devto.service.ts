@@ -12,7 +12,7 @@ export default class DevtoService {
 
   getPostSpanish(page: number): Observable<IDevto[]> {
     return this.http.get<IDevto[]>(
-      `${environment.devtoURL}/api/postspanish/${page}`
+      `${environment.devtoURL}/api/postspanish/${page}`,
     );
   }
 }

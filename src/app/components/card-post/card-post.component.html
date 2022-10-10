@@ -1,8 +1,13 @@
 <div class="card">
     <img [src]="post.user.profile_image_90" [alt]="post.user.name" class="card__user" loading="lazy">
     <a class="link-post" [href]="post.url" target="_blank">
-        <img [src]="post.cover_image || post.social_image " [alt]="post.title" class="link-post__image" loading="lazy">
-        <span class="link-post__date">{{post.published_at | date:'d MMM y'}}</span>
         <h2 class="link-post__title">{{post.title}}</h2>
+        <p class="link-post__date">{{post.published_at | date:'d MMM y'}} - {{post.reading_time_minutes}} Min</p>
+        <img [src]="post.cover_image || post.social_image " [alt]="post.title" class="link-post__image" loading="lazy">
     </a>
+    <div class="actions">
+        <button (click)="sharePost(post)" class="button">
+            <img src="/assets/images/share.svg" alt="shared" class="button__image">
+        </button>
+    </div>
 </div>
