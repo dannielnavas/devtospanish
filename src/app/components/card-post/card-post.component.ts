@@ -10,17 +10,20 @@ export default class CardPostComponent {
   @Input() post!: IDevto;
 
   // eslint-disable-next-line class-methods-use-this
-  async sharePost(post: IDevto): Promise<void> {
-    if (!navigator.share) return;
-    const share = {
-      title: post.title,
-      text: post.description,
-      url: post.url,
-    };
-    try {
-      await navigator.share(share);
-    } catch (error) {
-      console.log(error);
+  sharePost(post: IDevto): void {
+    const navigator = window.navigator as any;
+
+    if (navigator.share) {
+      navigator
+        .share({
+          title: post.title,
+          text: post.description,
+          url: post.url,
+        })
+        .then(() => console.log('Successful share'))
+        .catch((error: any) => console.log('Error sharing', error));
+    } else {
+      alert('No podemos soportar esta acción por el momento');
     }
   }
 }
