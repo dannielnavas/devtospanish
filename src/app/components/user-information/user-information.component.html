@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="image-name">
+        <img [src]="userData.profile_image" [alt]="userData.name" class="image-name__image">
+        <div class="user-information">
+            <h1 class="user-information__name">{{userData.name}}</h1>
+            <div class="links">
+                <a [href]="'https://github.com/'+userData.github_username" class="github" target="_blank">
+                    <img src="/assets/images/github-loop.svg" alt="Github profile" class="github__image">
+                </a>
+                <a [href]="'https://twitter.com/'+userData.twitter_username" target="_blank" class="twitter">
+                    <img src="/assets/images/twitter.svg" [alt]="userData.twitter_username" class="twitter__image">
+                </a>
+                <a [href]="userData.website_url" target="_blank" class="website">
+                    <img src="/assets/images/website.svg" [alt]="userData.name" class="website__image">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="summary">
+        <p>{{userData.summary}}</p>
+    </div>
+</div>

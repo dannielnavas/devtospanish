@@ -1,4 +1,7 @@
-import { Component, Input } from '@angular/core';
+import {
+  Component, EventEmitter, Input, Output,
+} from '@angular/core';
+import { HotToastService } from '@ngneat/hot-toast';
 import { IDevto } from 'src/app/core/models/devto.interface';
 
 @Component({
@@ -8,6 +11,10 @@ import { IDevto } from 'src/app/core/models/devto.interface';
 })
 export default class CardPostComponent {
   @Input() post!: IDevto;
+
+  @Output() modalUser: EventEmitter<number> = new EventEmitter<number>();
+
+  constructor(private toast: HotToastService) { }
 
   // eslint-disable-next-line class-methods-use-this
   sharePost(post: IDevto): void {
@@ -20,10 +27,10 @@ export default class CardPostComponent {
           text: post.description,
           url: post.url,
         })
-        .then(() => console.log('Successful share'))
-        .catch((error: any) => console.log('Error sharing', error));
+        .then(() => this.toast.success('😉 proceso exitoso'))
+        .catch(() => this.toast.error('🥵 Lo sentimos algo extraño paso. Te prometo que en mi maquina funciona.🥹'));
     } else {
-      alert('No podemos soportar esta acción por el momento');
+      this.toast.info('No podemos soportar esta acción 🥹');
     }
   }
 }

@@ -1,6 +1,9 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IDevto } from 'src/app/core/models/devto.interface';
+import { IUserDevto } from 'src/app/core/models/user-devto.interface';
 import DevtoService from 'src/app/core/services/devto.service';
+import { MatDialog } from '@angular/material/dialog';
+import UserInformationComponent from 'src/app/components/user-information/user-information.component';
 
 @Component({
   selector: 'app-main',
@@ -14,7 +17,7 @@ export default class MainComponent implements OnInit {
 
   loader: boolean = false;
 
-  constructor(private devtoService: DevtoService) {}
+  constructor(private devtoService: DevtoService, public dialog: MatDialog) {}
 
   ngOnInit(): void {
     this.getPostSpanish();
@@ -29,6 +32,7 @@ export default class MainComponent implements OnInit {
       });
   }
 
+  // eslint-disable-next-line class-methods-use-this
   trackByPost(index: number, post: IDevto): number {
     return post.id;
   }
@@ -42,5 +46,17 @@ export default class MainComponent implements OnInit {
         this.posts.push(...data);
         this.loader = !this.loader;
       });
+  }
+
+  dataUser(id: number): void {
+    this.devtoService.getDataUser(id).subscribe((user: IUserDevto) => {
+      this.openModal(user);
+    });
+  }
+
+  openModal(user: IUserDevto) {
+    this.dialog.open(UserInformationComponent, {
+      data: { ...user },
+    });
   }
 }

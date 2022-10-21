@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  devtoURL: 'https://devtospanishback.vercel.app',
+  devtoURL: 'http://localhost:3000/api',
 };
 
 /*

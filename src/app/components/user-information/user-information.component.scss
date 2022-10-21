@@ -1,0 +1,70 @@
+@import "../../utils/scss/vars";
+
+.container {
+    height: auto;
+    width: 400px;
+}
+
+.image-name {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+
+    &__image {
+        height: 80px;
+    }
+
+    &__name {
+        margin: 0;
+    }
+}
+
+.user-information {
+    height: auto;
+    width: auto;
+
+    &__name {
+        margin: 0;
+    }
+}
+
+.links {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 16px;
+}
+
+.summary {
+    margin-top: 32px;
+}
+
+
+.website {
+    text-decoration: none;
+
+    &__image {
+        height: 32px;
+    }
+}
+
+.github {
+    text-decoration: none;
+
+    &__image {
+        height: 32px;
+    }
+}
+
+.twitter {
+    text-decoration: none;
+
+    &__image {
+        height: 32px;
+    }
+}

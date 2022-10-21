@@ -1,14 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import "./app/utils/scss/vars";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
 
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Ubuntu Condensed', sans-serif;
 }
 
-html,
-body {
-    background-color: $main-color;
-    font-family: 'Roboto', sans-serif;
-}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

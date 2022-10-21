@@ -5,8 +5,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
 import localeEs from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
+import { HotToastModule } from '@ngneat/hot-toast';
 import AppRoutingModule from './app-routing.module';
 import AppComponent from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 registerLocaleData(localeEs, 'es');
 @NgModule({
@@ -16,6 +18,8 @@ registerLocaleData(localeEs, 'es');
     AppRoutingModule,
     StoreModule.forRoot({}, {}),
     HttpClientModule,
+    HotToastModule.forRoot(),
+    BrowserAnimationsModule,
   ],
   providers: [
     {
