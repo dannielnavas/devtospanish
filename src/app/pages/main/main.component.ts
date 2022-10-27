@@ -4,6 +4,7 @@ import { IUserDevto } from 'src/app/core/models/user-devto.interface';
 import DevtoService from 'src/app/core/services/devto.service';
 import { MatDialog } from '@angular/material/dialog';
 import UserInformationComponent from 'src/app/components/user-information/user-information.component';
+import LoaderService from '../../core/services/loader.service';
 
 @Component({
   selector: 'app-main',
@@ -17,7 +18,11 @@ export default class MainComponent implements OnInit {
 
   loader: boolean = false;
 
-  constructor(private devtoService: DevtoService, public dialog: MatDialog) {}
+  constructor(
+    private devtoService: DevtoService,
+    public dialog: MatDialog,
+    private loaderService: LoaderService,
+  ) {}
 
   ngOnInit(): void {
     this.getPostSpanish();
@@ -29,6 +34,7 @@ export default class MainComponent implements OnInit {
       .subscribe((data: IDevto[]) => {
         this.counter += 1;
         this.posts = data;
+        this.loaderService.hide();
       });
   }
 

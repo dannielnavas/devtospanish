@@ -10,5 +10,7 @@ import MainRoutingModule from './main-routing.module';
   declarations: [MainComponent],
   imports: [CommonModule, MainRoutingModule, CardPostModule,
     MatDialogModule],
+  providers: [
+  ],
 })
 export default class MainModule {}
