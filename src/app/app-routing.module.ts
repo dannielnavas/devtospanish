@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EConfigRoutes } from './utils/routes/config.routes';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () =>
-      import('./pages/main/main.module').then((m) => m.default),
+    loadChildren: () => import('./pages/main/main.module').then((m) => m.default),
   },
 ];
 
