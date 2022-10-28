@@ -11,6 +11,7 @@ import AppRoutingModule from './app-routing.module';
 import AppComponent from './app.component';
 import LoaderInterceptor from './core/interceptors/loader.interceptor';
 import LoaderModule from './components/loader/loader.module';
+import NavbarModule from './components/navbar/navbar.module';
 
 registerLocaleData(localeEs, 'es');
 @NgModule({
@@ -23,6 +24,7 @@ registerLocaleData(localeEs, 'es');
     HotToastModule.forRoot(),
     BrowserAnimationsModule,
     LoaderModule,
+    NavbarModule,
   ],
   providers: [
     {
