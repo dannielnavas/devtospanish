@@ -15,9 +15,20 @@ body {
 
 body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-    background-color: #1a1a1a;
+    background-color: $erieBlack;
 }
-h1, h2, h3, h4 {
-    color: #fff;
+
+h1,
+h2,
+h3,
+h4 {
+    color: $white;
+}
+
+.mat-h2,
+.mat-title,
+.mat-typography .mat-h2,
+.mat-typography .mat-title,
+.mat-typography h2 {
+    font: inherit !important;
 }

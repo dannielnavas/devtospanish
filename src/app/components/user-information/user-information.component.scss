@@ -1,4 +1,4 @@
-@import "../../utils/scss/vars";
+@import "../../utils/scss/_vars";
 
 .container {
     height: auto;
@@ -42,8 +42,9 @@
 
 .summary {
     margin-top: 32px;
+
     &__text {
-        color: #FFF;
+        color: $white;
     }
 }
 
@@ -74,5 +75,5 @@
 
 
 ::ng-deep .mat-dialog-container {
-    background-color: #1a1919;
+    background-color: $eerieBlack;
 }

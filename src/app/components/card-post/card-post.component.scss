@@ -3,12 +3,6 @@
 .card {
     min-height: 300px;
     width: 350px;
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
     padding: 8px;
     display: flex;
     flex-flow: row wrap;
@@ -16,8 +10,6 @@
 
 
     &__user {
-        border-radius: 9999px;
-        height: 50px;
         cursor: pointer;
     }
 
@@ -36,7 +28,6 @@
     }
 
     &__date {
-        color: $text-color-date;
         font-size: 14px;
         text-transform: capitalize;
         font-weight: 300;
@@ -46,7 +37,6 @@
     }
 
     &__title {
-        color: #fff;
         font-size: 24px;
         font-weight: 700;
         line-height: 24px;
@@ -88,4 +78,11 @@
     &__image {
         height: 24px;
     }
+}
+
+
+h2 {
+    font-size: 1.127rem !important;
+    font-family: Fira Code, monospace !important;
+    font-weight: bold !important;
 }
