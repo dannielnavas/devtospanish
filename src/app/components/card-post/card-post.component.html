@@ -1,15 +1,29 @@
-<div class="card">
-    <img [src]="post.user.profile_image_90" [alt]="post.user.name" class="card__user" loading="lazy" (click)="modalUser.emit(post.user.user_id)" >
-    <a class="link-post" [href]="post.url" target="_blank">
-        <h2 class="link-post__title">{{post.title}}</h2>
-        <p class="link-post__date">{{post.published_at | date:'d MMM y'}} - {{post.reading_time_minutes}} Min</p>
-        <img [src]="post.cover_image || post.social_image " [alt]="post.title" class="link-post__image" loading="lazy">
-    </a>
-    <div class="actions">
-        <button (click)="sharePost(post)" class="button">
-            <img src="/assets/images/share.svg" alt="shared" class="button__image">
-        </button>
-        <h1 class="actions__comments"><img src="/assets/images/comment.svg" alt="Comments">{{post.comments_count}}</h1>
-        <h1 class="actions__reactions"><img src="/assets/images/heart-12-regular.svg" alt="reactions">{{post.public_reactions_count}}</h1>
+<div>
+    <div variant="subtle" class="drac-box drac-card drac-card-subtle drac-border-cyan drac-bg-cyan drac-p-sm ">
+        <div class="card">
+            <span class="drac-avatar drac-bg-green-transparent drac-text-green">
+                <img [src]="post.user.profile_image" [alt]="post.user.name" class="drac-avatar-background card__user"
+                    loading="lazy" (click)="modalUser.emit(post.user.user_id)">
+            </span>
+
+            <a class="link-post" [href]="post.url" target="_blank">
+                <h2 class="drac-heading drac-heading-lg drac-text-purple-cyan">{{post.title}}</h2>
+                <p class="drac-text drac-text-xs drac-line-height drac-text-green drac-text-semibold drac-p-xxs">
+                    {{post.published_at | date:'d MMM y'}} -
+                    {{post.reading_time_minutes}} Min
+                </p>
+                <img [src]="post.cover_image || post.social_image " [alt]="post.title" class="link-post__image"
+                    loading="lazy">
+            </a>
+            <div class="actions">
+                <button (click)="sharePost(post)" class="button">
+                    <img src="/assets/images/share.svg" alt="shared" class="button__image">
+                </button>
+                <h1 class="actions__comments"><img src="/assets/images/comment.svg"
+                        alt="Comments">{{post.comments_count}}</h1>
+                <h1 class="actions__reactions"><img src="/assets/images/heart-12-regular.svg"
+                        alt="reactions">{{post.public_reactions_count}}</h1>
+            </div>
+        </div>
     </div>
 </div>

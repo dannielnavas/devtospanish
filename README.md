@@ -1,27 +1,41 @@
-# Devtospanish
+[![GPLv3 License](https://img.shields.io/github/license/DannielNavas/devtospanish)](https://opensource.org/licenses/)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.1.
+[![issues](https://img.shields.io/github/issues/DannielNavas/devtospanish)](https://github.com/DannielNavas/devtospanish/issues)
 
-## Development server
+# Dev.to en español
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Proyecto creado para la comunidad, en el que se centralizan los articulos escritos en nuestro idioma.
 
-## Code scaffolding
+## Deployment
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para desplegar este proyecto puede realizar un push o un PR sobre la rama main
 
-## Build
+```bash
+  git push origin main
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Run Locally
 
-## Running unit tests
+Clonar el proyecto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+  git clone git@github.com:DannielNavas/devtospanish.git
+```
 
-## Running end-to-end tests
+ir al directorio del proyecto
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+  cd devtospanish
+```
 
-## Further help
+Instalar dependencias
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+  yarn install
+```
+
+correr proyecto
+
+```bash
+  ng s -o
+```
