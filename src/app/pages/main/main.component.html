@@ -5,7 +5,8 @@
             </app-card-post>
             <div *ngIf="posts.length -1 === i" class="load-posts">
                 <img src="/assets/images/loaditem.svg" alt="load" class="load-posts__loader" *ngIf="loader">
-                <button class="load-posts__button" (click)="addPosts()" *ngIf="!loader">
+                <button class="drac-btn drac-bg-purple-cyan drac-m-sm load-posts__button" (click)="addPosts()"
+                    *ngIf="!loader">
                     Mostrar más publicaciones
                 </button>
             </div>
