@@ -16,8 +16,7 @@ export default class AppComponent {
   }
 
   updatePWA(): void {
-    this.swUpdate.versionUpdates.subscribe((value) => {
-      console.log('uodate', value);
+    this.swUpdate.versionUpdates.subscribe(() => {
       window.location.reload();
     });
   }
