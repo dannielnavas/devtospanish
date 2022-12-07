@@ -1,3 +1,4 @@
+<app-install *ngIf="installEvent" (install)="installByUser()"></app-install>
 <section class="container">
     <div class="row">
         <ng-container *ngFor="let  post of posts; trackBy: trackByPost; let i = index ">
