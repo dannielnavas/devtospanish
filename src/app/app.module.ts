@@ -1,4 +1,4 @@
-import { LOCALE_ID, NgModule, isDevMode } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
@@ -27,7 +27,7 @@ registerLocaleData(localeEs, 'es');
     LoaderModule,
     NavbarModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: !isDevMode(),
+      enabled: true,
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000',
@@ -46,4 +46,4 @@ registerLocaleData(localeEs, 'es');
   ],
   bootstrap: [AppComponent],
 })
-export default class AppModule {}
+export default class AppModule { }
