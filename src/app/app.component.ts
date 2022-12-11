@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SwUpdate } from '@angular/service-worker';
 import LoaderService from './core/services/loader.service';
 
 @Component({
@@ -9,7 +10,14 @@ import LoaderService from './core/services/loader.service';
 export default class AppComponent {
   title = 'devtospanish';
 
-  constructor(private loaderService: LoaderService) {
+  constructor(private loaderService: LoaderService, private swUpdate: SwUpdate) {
     this.loaderService.show();
+    this.updatePWA();
+  }
+
+  updatePWA(): void {
+    this.swUpdate.versionUpdates.subscribe(() => {
+      window.location.reload();
+    });
   }
 }

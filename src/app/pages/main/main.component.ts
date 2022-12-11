@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { IDevto } from 'src/app/core/models/devto.interface';
 import { IUserDevto } from 'src/app/core/models/user-devto.interface';
 import DevtoService from 'src/app/core/services/devto.service';
@@ -18,11 +18,13 @@ export default class MainComponent implements OnInit {
 
   loader: boolean = false;
 
+  installEvent: any = null;
+
   constructor(
     private devtoService: DevtoService,
     public dialog: MatDialog,
     private loaderService: LoaderService,
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.getPostSpanish();
@@ -64,5 +66,21 @@ export default class MainComponent implements OnInit {
     this.dialog.open(UserInformationComponent, {
       data: { ...user },
     });
+  }
+
+  @HostListener('window:beforeinstallprompt', ['$event'])
+  onBeforeInstallPrompt(event: Event): void {
+    event.preventDefault();
+    this.installEvent = event;
+  }
+
+  installByUser(): void {
+    if (this.installEvent) {
+      this.installEvent.prompt();
+      this.installEvent.userChoice
+        .then((rta: any) => {
+          console.log(rta);
+        });
+    }
   }
 }
