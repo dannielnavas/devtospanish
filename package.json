@@ -24,7 +24,7 @@
     "@angular/service-worker": "^15.0.4",
     "@ngneat/hot-toast": "4.1.0",
     "@ngneat/overview": "^3.0.0",
-    "@ngrx/store": "^14.2.0",
+    "@ngrx/store": "^15.1.0",
     "dracula-ui": "^1.0.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
