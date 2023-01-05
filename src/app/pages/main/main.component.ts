@@ -2,7 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { IDevto } from 'src/app/core/models/devto.interface';
 import { IUserDevto } from 'src/app/core/models/user-devto.interface';
 import DevtoService from 'src/app/core/services/devto.service';
-import { MatDialog } from '@angular/material/dialog';
+import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
 import UserInformationComponent from 'src/app/components/user-information/user-information.component';
 import LoaderService from '../../core/services/loader.service';
 
